@@ -10,10 +10,29 @@
     "type": "git",
     "url": "git+https://github.com/arthurdiblasio/clean-node-api.git"
   },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/arthurdiblasio/clean-node-api/issues"
   },
-  "homepage": "https://github.com/arthurdiblasio/clean-node-api#readme"
+  "homepage": "https://github.com/arthurdiblasio/clean-node-api#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "eslint": "^8.48.0"
+  }
 }
